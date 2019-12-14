@@ -86,7 +86,7 @@ var patchSubs = function(oldSubs, newSubs, dispatch) {
               oldSub && oldSub[2]()
             ]
           : oldSub
-        : oldSub && oldSub[2]()
+        : oldSub && typeof oldSub[2] ==='function' && oldSub[2]()
     )
   }
   return subs
